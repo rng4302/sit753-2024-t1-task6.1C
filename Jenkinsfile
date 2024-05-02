@@ -76,6 +76,7 @@ pipeline {
                 echo 'Deploying to production environment...'
                 echo 'Production server: AWS EC2'
                 // Example: sh 'aws ecs deploy ...'
+                echo 'Code editing to check its dynamic implementation'
             }
         }
     }
