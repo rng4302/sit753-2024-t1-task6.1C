@@ -17,15 +17,17 @@ pipeline {
             post {
                 success {
                     echo 'Unit and integration tests passed.'
-                    emailext body: 'Unit and integration tests passed successfully.',
+                    emailext attachLog: true, 
+                             body: 'Unit and integration tests passed successfully.',
                              subject: 'Test Success',
-                             to: 'recipient@example.com'
+                             to: 'rajgariwala40302@gmail.com'
                 }
                 failure {
                     echo 'Unit and integration tests failed.'
-                    emailext body: 'Unit and integration tests failed. Please check the logs for details.',
+                    emailext attachLog: true, 
+                             body: 'Unit and integration tests failed. Please check the logs for details.',
                              subject: 'Test Failure',
-                             to: 'recipient@example.com'
+                             to: 'rajgariwala40302@gmail.com'
                 }
             }
         }
@@ -45,15 +47,17 @@ pipeline {
             post {
                 success {
                     echo 'Security scan passed.'
-                    emailext body: 'Security scan passed successfully.',
+                    emailext attachLog: true, 
+                             body: 'Security scan passed successfully.',
                              subject: 'Security Scan Success',
-                             to: 'recipient@example.com'
+                             to: 'rajgariwala40302@gmail.com'
                 }
                 failure {
                     echo 'Security scan failed.'
-                    emailext body: 'Security scan failed. Please check the logs for details.',
+                    emailext attachLog: true, 
+                             body: 'Security scan failed. Please check the logs for details.',
                              subject: 'Security Scan Failure',
-                             to: 'recipient@example.com'
+                             to: 'rajgariwala40302@gmail.com'
                 }
             }
         }
@@ -76,7 +80,6 @@ pipeline {
                 echo 'Deploying to production environment...'
                 echo 'Production server: AWS EC2'
                 // Example: sh 'aws ecs deploy ...'
-                echo 'Code editing to check its dynamic implementation'
             }
         }
     }
