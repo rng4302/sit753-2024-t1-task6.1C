@@ -81,7 +81,6 @@ pipeline {
                 echo 'Production server: AWS EC2'
                 // Example: sh 'aws ecs deploy ...'
             }
-        echo 'Printing this echo to check the dynamic nature of jenkins build.'
         }
     }
 }
